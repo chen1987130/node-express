@@ -18,6 +18,7 @@
 启动项目 <br/>
 4.访问项目 <br/>
 http://127.0.0.1:3000/ <br/>
+![主界面](https://github.com/chen1987130/node-express/blob/master/doc/1.png)
 <br/>
 注：主要配置文件src\config.js，js\base\common.js<br/>
 <br/>
@@ -34,4 +35,4 @@ eclipse下载地址:http://www.eclipse.org/downloads/ <br/> <br/>
 nodeclipse： location:http://www.nodeclipse.org/updates/ <br/>
 google v8：location:http://chromedevtools.googlecode.com/svn/update/dev/ <br/>
 
-![主界面](https://github.com/chen1987130/node-express/blob/master/doc/1.png)
+
