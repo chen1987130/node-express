@@ -9,6 +9,7 @@
 3.执行数据库脚本 <br/>
 <a href="https://github.com/chen1987130/node-express/blob/master/doc/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%84%9A%E6%9C%AC.sql">数据库脚本地址</a>
 <br/>
+<br/>
 启动顺序 <br/>
 1.CMD进入node-express目录(根据自己工程目录修改) <br/>
 如：D:\dev\workspace_nodejs\node-express <br/>
