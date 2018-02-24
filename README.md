@@ -6,8 +6,8 @@
 本地nodejs版本5.5.1,npm版本v8.9.1 <br/>
 2.安装数据库mysql <br/>
 <a href="https://github.com/chen1987130/node-express/blob/master/src/config.js">数据库配置</a> <br/>
-3.执行数据库脚本
-<a href="https://github.com/chen1987130/node-express/blob/master/doc/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%84%9A%E6%9C%AC.sql">数据库脚本地址</a> <br/>
+3.执行数据库脚本 <br/>
+<a href="https://github.com/chen1987130/node-express/blob/master/doc/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%84%9A%E6%9C%AC.sql">数据库脚本地址</a>
 <br/>
 启动顺序 <br/>
 1.CMD进入node-express目录(根据自己工程目录修改) <br/>
@@ -18,6 +18,7 @@
 启动项目 <br/>
 4.访问项目 <br/>
 http://127.0.0.1:3000/ <br/>
+<br/>
 
 ![主界面](https://github.com/chen1987130/node-express/blob/master/doc/1.png)
 
