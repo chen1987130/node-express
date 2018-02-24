@@ -34,3 +34,4 @@ eclipse下载地址:http://www.eclipse.org/downloads/ <br/> <br/>
 nodeclipse： location:http://www.nodeclipse.org/updates/ <br/>
 google v8：location:http://chromedevtools.googlecode.com/svn/update/dev/ <br/>
 
+![主界面](https://github.com/chen1987130/node-express/blob/master/doc/1.png)
