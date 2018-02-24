@@ -19,7 +19,7 @@
 4.访问项目 <br/>
 http://127.0.0.1:3000/ <br/>
 <br/>
-注：主要配置文件src\config.js,js\base\common.js<br/>
+注：主要配置文件src\config.js，js\base\common.js<br/>
 <br/>
 框架 <br/>
 1.express(mvc框架)   文档地址:http://www.expressjs.com.cn/4x/api.html <br/>
