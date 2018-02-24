@@ -22,7 +22,10 @@ http://127.0.0.1:3000/ <br/>
 ![主界面](https://github.com/chen1987130/node-express/blob/master/doc/1.png)
 
 <br/>
-注：主要配置文件src\config.js，js\base\common.js<br/>
+注：主要配置文件
+<a href="https://github.com/chen1987130/node-express/blob/master/src/config.js">src\config.js</a> ，
+<a href="https://github.com/chen1987130/node-express/blob/master/js/base/common.js">js\base\common.js</a>
+<br/>
 <br/>
 框架 <br/>
 1.express(mvc框架)   文档地址:http://www.expressjs.com.cn/4x/api.html <br/>
