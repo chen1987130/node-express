@@ -10,7 +10,7 @@ CREATE TABLE `base_module` (
   `module_pid` bigint(18) NOT NULL DEFAULT '0',
   `module_sort` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `base_user` (
   `id` bigint(18) NOT NULL AUTO_INCREMENT,
@@ -19,7 +19,7 @@ CREATE TABLE `base_user` (
   `username` varchar(100) NOT NULL DEFAULT '',
   `status` tinyint(2) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 INSERT INTO `base_module` VALUES ('1', '系统管理', '001', '', '', '0', '99');
