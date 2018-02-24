@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+    meta(http-equiv="cache-control",content="no-cache")
+    meta(http-equiv="pragma",content="no-cache")
+    title framework
+    
+    link(rel='stylesheet', href='/bootstarp/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/v2/style.css')
+    link(rel='stylesheet', href='/css/login.css')
+    
+    
+    script(src='/js/require.js')
+    script(src='/js/require-config.js')
+    script(src='/js/lib/jquery-1.11.2.min.js')
+    script(src='/bootstarp/js/bootstrap.min.js')
+    script(src='/js/page/login-page.js')
+    
+  body
+
+    div.navbar.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          a.brand(href='javascript:;')  Bootstrap + Nodejs Template
+    div.account-container
+      div.content.clearfix
+        form(id='loginForm',action='javascript:;',method='post')
+          h3 用户登陆
+          div.login-fields
+            p(id='hints',style='display:none;color:#b10038;')
+            div.field
+              label(for='username') 用户名
+              input.login.username-field(id='username',name='username',type='text',placeholder='用户名')
+            div.field
+              label(for='password') 密码
+              input.login.password-field(id='password',name='password',type='password',placeholder='密码')
+            div.login-actions
+              span.login-checkbox
+                input.field.login-checkbox(id='remember',name='remember',type='checkbox',value='1')
+                label.choice(for='remember') 自动登陆
+              button.button.btn.btn-success(id='loginBtn') 登陆
+              
+              

@@ -1,0 +1,53 @@
+extends ./common/layout
+
+block append script
+
+  script(src='/js/page/index-page.js')
+
+block content
+  
+  // 头部
+  div#navbar.navbar.navbar-default
+    div#navbar-container.navbar-container
+      a.navbar-brand(href='javascript:;')
+        img#logourl(src='/images/blank.png')
+    div.navbar-header.pull-right(role='navigation')
+      ul.nav.ace-nav
+        li.purple
+          a.dropdown-toggle(href='javascript:;',data-toggle='dropdown')
+            i.icon-bell-alt
+            span#all_badge.badge.badge-important 0
+        li.light-blue
+          a.dropdown-toggle(href='javascript:;',data-toggle="dropdown")
+            img.nav-user-photo(src='/bootstarp/avatars/user.jpg')
+            span.user-info
+              small 你好,
+              | #{prop.user.username}
+            i.icon-caret-down
+          ul.user-menu.pull-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
+            li: a(href='javascript:;')
+              i#en_icon(class='icon-*') 
+              | 修改密码
+            li.divider
+            li: a(href='/logout')
+              i(class='icon-off') 
+              | 注销
+  // 菜单
+  div
+    div#menutree.lefttree
+      div#sidebar-shortcuts.sidebar-shortcuts
+        div#sidebar-shortcuts-large.sidebar-shortcuts-large
+          button#desktopBar.btn.btn-danger(title='我的桌面'): i.icon-desktop
+          button.btn.btn-success(title='应用'): i.icon-road
+          button.btn.btn-info(title='应用'): i.icon-map-marker
+          button.btn.btn-warning(title='注销'): i.icon-off
+        button#upBtn.btn.btn-default.btn-chevron: i.icon-chevron-up
+        div#sidebar.sidebar
+          ul.nav.nav-list
+            
+          
+        button#downBtn.btn.btn-default.btn-chevron: i.icon-chevron-down
+    div.right(style='float: right')
+      iframe#rframe.rframe(src='about:blank',align='center',frameborder='0',marginwidth='0',marginheight='0',scrolling='auto',style='height:400px;')
+    
+    // include ./html/index.html  

@@ -1,0 +1,28 @@
+extends ../common/layout
+
+block append script
+
+  script(src='/js/page/cron/task-list-page.js')
+
+block content
+
+  div#main
+    div.posnav
+      span.tool
+        button.btn.btn-info.btn-normal(id='addBtn',type='button') 新增定时任务
+        
+      span.title
+        i.icon-desktop 
+        | 定时任务
+        i.nav-icon 
+        | 定时任务管理
+        
+    div.content
+      div.alert.alert-info.alert-content
+        i.icon-tag
+        | &nbsp;&nbsp;双击列表查看详情&nbsp;&nbsp;
+        button.close(type='button',data-dismiss='alert')
+          i.icon-remove
+      .tbl_div
+        table.list-tbl.table-striped.table-hover(id='taskList',cellspacing='1',cellpadding='0',border='0',align='center')
+          tbody

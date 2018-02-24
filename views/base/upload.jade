@@ -1,0 +1,21 @@
+extends ../common/layout
+
+block append script
+
+  script(src='/js/lib/jquery-1.11.2.min.js')
+  script(src='/js/page/upload-page.js')
+
+block content
+  form(method='post',enctype='multipart/form-data',action='/upload/file-upload') 
+    input(name='username',type='text')
+    input(name='password',type='password')
+    input(name='thumbnail',type='file')
+    input(type='submit')
+    br
+    button.btn.btn-primary.btn-query(id='toastBtn',type='button') Toast提示
+    button.btn.btn-primary.btn-query(id='setCookiesBtn1',type='button') 设置cookies
+    button.btn.btn-primary.btn-query(id='setCookiesBtn2',type='button') 设置cookies
+    button.btn.btn-primary.btn-query(id='getCookiesBtn1',type='button') 获取cookies
+    button.btn.btn-primary.btn-query(id='getCookiesBtn2',type='button') 获取cookies
+    button.btn.btn-primary.btn-query(id='getUserAgent',type='button') 获取UA
+  

@@ -1,0 +1,41 @@
+extends ../common/layout
+
+block append script
+
+  script(src='/js/page/user-edit-page.js')
+
+block content
+  form(id='userForm',name='userForm',method='post') 
+    input(id='id',name='id',type='hidden',value='#{entity.id}')
+  
+    div.addBox
+      table.add-tbl(border='0',cellspacing='1',cellpadding='1',width='100%')
+        tr
+          td.oldcolumn(width='30%')
+            span.red *
+            |用户账号：
+          td(width='70%')
+            input(id='account',name='account',type='text',maxlength='20',size='40',value='#{entity.account}')
+        tr 
+          td.oldcolumn(width='30%')
+            span.red *
+            |用户姓名：
+          td(width='70%')
+            input(id='username',name='username',type='text',maxlength='20',size='40',value='#{entity.username}')
+        tr 
+          td.oldcolumn(width='30%')
+            span.red *
+            |用户姓名：
+          td(width='70%')
+            select(id='status',name='status')
+              + ui_option(userStatusDic,entity.status)
+        tr(class='uh')
+          td.oldcolumn(width='30%')
+          td(width='70%')
+            input(id='repass',name='repass',type='checkbox',value='1') 
+            label(for='repass') 重置密码
+          
+  div.alert.alert-info.alert-toolbar
+    button.btn.btn-primary.btn-normal(id='btnSave',type='button') 保存
+    | &nbsp;&nbsp;&nbsp;
+    button.btn.btn-default.btn-normal(onclick='art.dialog.close();') 关闭

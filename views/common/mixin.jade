@@ -1,0 +1,9 @@
+mixin ui_option(items, value, root)
+  if(root) 
+    option(value='') #{root}
+  each item in items
+    if(typeof(value) !== 'undefined' && value == item.key)
+      option(value='#{item.key}',selected='selected') #{item.value}
+    else
+      option(value='#{item.key}') #{item.value}
+    

@@ -1,0 +1,49 @@
+extends ../common/layout
+
+block append script
+
+  script(src='/js/page/cron/server-list-page.js')
+
+block content
+
+  div#main
+    div.posnav
+      span.title
+        i.icon-desktop 
+        | 定时任务
+        i.nav-icon 
+        | 定时任务服务器
+        
+    div.content
+      div.addBox(style='min-height:300px;')
+        div(id='tabs')
+          div(id='tabs-basic')
+            table.add-tbl(width='60%',border='0',cellspacing='1',cellpadding='0',align='center')
+              tr 
+                td(colspan='2',style='text-align: center;') 定时任务服务器信息
+              tr 
+                td 开始运行时间
+                td #{data.runSince}
+              tr
+                td 已执行任务次数
+                td #{data.numTasksExecuted}
+              tr
+                td 运行状态
+                td #{data.statusText}
+              tr
+                td 线程池大小
+                td #{data.threadPoolSize}
+              tr
+                td(colspan='2',style='text-align: center;')
+                  if(data.status == 'started')
+                    button.btn.btn-default.btn-linked(type='button',id='startedBtn',disabled='disabled') 开始
+                    button.btn.btn-success.btn-linked(type='button',id='pausedBtn') 暂停
+                    button.btn.btn-success.btn-linked(type='button',id='stopedBtn') 停止
+                  if(data.status == 'paused')
+                    button.btn.btn-success.btn-linked(type='button',id='startedBtn') 开始
+                    button.btn.btn-default.btn-linked(type='button',id='pausedBtn',disabled='disabled') 暂停
+                    button.btn.btn-success.btn-linked(type='button',id='stopedBtn') 停止
+                  if(data.status == 'stoped')
+                    button.btn.btn-success.btn-linked(type='button',id='startedBtn') 开始
+                    button.btn.btn-success.btn-linked(type='button',id='pausedBtn') 暂停
+                    button.btn.btn-default.btn-linked(type='button',id='stopedBtn',disabled='disabled') 停止

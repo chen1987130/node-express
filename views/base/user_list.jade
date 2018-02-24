@@ -1,0 +1,56 @@
+extends ../common/layout
+
+block append script
+
+  script(src='/js/page/user-list-page.js')
+
+block content
+
+  div#main
+    div.posnav
+      span.tool
+        button.btn.btn-info.btn-normal(id='addBtn',type='button') 用户新增
+        
+        span.swarp
+          input.qbox(type='text',name='baseQuery',id='baseQuery',placeholder='请输入用户名称')
+          a.toggle(href='javascript:void(0);',data-action='collapse'): i.icon-chevron-up
+      span.title
+        i.icon-desktop 
+        | 系统管理
+        i.nav-icon 
+        | 用户管理
+
+    div.content
+      div.widget-box.collapsed
+        div.widget-body
+          //筛选条件
+          div.tline: span 筛选查询
+        
+          div.widget-option
+            label 用户状态:
+            select(id='statusQuery') 
+              + ui_option(userStatusDic,null,'请选择')
+          
+          div.tline: span 基础查询
+          
+          div.widget-option  
+            label 用户名称：
+            input(id='userQuery',type='text',size=30)
+          
+          //查询按钮
+          div.submit-div
+            button.btn.btn-primary.btn-query(id='btnQuery',type='button') 查询
+            | &nbsp;&nbsp;OR&nbsp;&nbsp;
+            button.btn.btn-default.btn-query(id='btnReset',type='button',onclick='Util.clearQuery();') 重置
+      
+      div.alert.alert-info.alert-content
+        i.icon-tag
+        | &nbsp;&nbsp;双击列表查看详情&nbsp;&nbsp;
+        button.close(type='button',data-dismiss='alert')
+          i.icon-remove
+        
+      .tbl_div
+        table.list-tbl.table-striped.table-hover(id='userList',cellspacing='1',cellpadding='0',border='0',align='center')
+          tbody
+              
+              
